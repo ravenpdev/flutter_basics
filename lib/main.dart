@@ -22,30 +22,50 @@ class MyApp extends StatelessWidget {
           title: const Text('Flutter Basics'),
           centerTitle: true,
         ),
-        body: Container(),
+        body: Container(
+          decoration: BoxDecoration(
+            color: Colors.pink,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            // mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                color: Colors.green,
+                child: const Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text('First child of column'),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                width: 200,
+                height: 200,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.orange,
+                ),
+                child: const Center(
+                  child: Text(
+                    'First child of column',
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ),
+              const Text('Hello World')
+            ],
+          ),
+        ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
           child: const Icon(Icons.add),
-        ),
-        drawer: Drawer(
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: [
-              const DrawerHeader(
-                child: Text(
-                  'Drawer Header',
-                ),
-              ),
-              ListTile(
-                title: const Text('Item 1'),
-                onTap: () {},
-              ),
-              ListTile(
-                title: const Text('Item 2'),
-                onTap: () {},
-              )
-            ],
-          ),
         ),
       ),
     );
