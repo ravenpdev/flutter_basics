@@ -22,30 +22,31 @@ class MyApp extends StatelessWidget {
           title: const Text('Flutter Basics'),
           centerTitle: true,
         ),
-        body: Container(),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: const Icon(Icons.add),
-        ),
-        drawer: Drawer(
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: [
-              const DrawerHeader(
-                child: Text(
-                  'Drawer Header',
+        body: Center(
+          // center is now centering the container not the text widget
+          child: Container(
+            height: 200,
+            width: 200,
+            // padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.blue,
+              borderRadius: BorderRadius.circular(100),
+            ),
+            // this will center the text inside the container
+            child: const Center(
+              child: Text(
+                'Hello World!',
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 20,
                 ),
               ),
-              ListTile(
-                title: const Text('Item 1'),
-                onTap: () {},
-              ),
-              ListTile(
-                title: const Text('Item 2'),
-                onTap: () {},
-              )
-            ],
+            ),
           ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => debugPrint('clicked'),
+          child: const Icon(Icons.ac_unit),
         ),
       ),
     );
