@@ -22,30 +22,46 @@ class MyApp extends StatelessWidget {
           title: const Text('Flutter Basics'),
           centerTitle: true,
         ),
-        body: Container(),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: const Icon(Icons.add),
-        ),
-        drawer: Drawer(
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: [
-              const DrawerHeader(
-                child: Text(
-                  'Drawer Header',
+        body: Column(
+          children: [
+            SizedBox(
+              width: 100,
+              height: 400,
+              child: Image.asset(
+                'assets/boy.png',
+                // fit: BoxFit.fitHeight,
+                // fit: BoxFit.fitWidth,
+                // fit: BoxFit.fill,
+                fit: BoxFit.cover,
+                // fit: BoxFit.contain,
+              ),
+            ),
+            const SizedBox(
+              height: 100,
+              width: 100,
+              child: CircleAvatar(
+                backgroundImage:
+                    NetworkImage('https://image.dummyjson.com/100x100'),
+              ),
+            ),
+            const Stack(
+              children: [
+                SizedBox(
+                  height: 100,
+                  width: 100,
+                  child: CircleAvatar(
+                    backgroundImage:
+                        NetworkImage('https://image.dummyjson.com/100x100'),
+                  ),
                 ),
-              ),
-              ListTile(
-                title: const Text('Item 1'),
-                onTap: () {},
-              ),
-              ListTile(
-                title: const Text('Item 2'),
-                onTap: () {},
-              )
-            ],
-          ),
+                Positioned(
+                  bottom: 0,
+                  child: Text('Raven Paragas'),
+                ),
+              ],
+            ),
+            Flexible(child: ClipRRect(child: Image.asset('assets/boy.png'))),
+          ],
         ),
       ),
     );
