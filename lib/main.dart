@@ -22,29 +22,64 @@ class MyApp extends StatelessWidget {
           title: const Text('Flutter Basics'),
           centerTitle: true,
         ),
-        body: Container(),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: const Icon(Icons.add),
-        ),
-        drawer: Drawer(
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: [
-              const DrawerHeader(
-                child: Text(
-                  'Drawer Header',
+        body: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: SingleChildScrollView(
+            // physics: const BouncingScrollPhysics(),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Row(
+                  children: [
+                    Text('Hello World'),
+                    SizedBox(
+                      width: 20,
+                    ),
+                  ],
                 ),
-              ),
-              ListTile(
-                title: const Text('Item 1'),
-                onTap: () {},
-              ),
-              ListTile(
-                title: const Text('Item 2'),
-                onTap: () {},
-              )
-            ],
+                const SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: const Icon(Icons.notifications),
+                ),
+                const SizedBox(height: 20),
+                Container(
+                  height: 200,
+                  width: 200,
+                  decoration: const BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Container(
+                  height: 200,
+                  width: 200,
+                  decoration: const BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Container(
+                  height: 200,
+                  width: 200,
+                  decoration: const BoxDecoration(
+                    color: Colors.yellow,
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Container(
+                  height: 200,
+                  width: 200,
+                  decoration: const BoxDecoration(
+                    color: Colors.teal,
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
