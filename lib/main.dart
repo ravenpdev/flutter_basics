@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           title: const Text('Flutter Basics'),
           centerTitle: true,
         ),
-        body: Container(),
+        body: const DiffLayout(),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
           child: const Icon(Icons.add),
@@ -49,5 +49,56 @@ class MyApp extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class DiffLayout extends StatelessWidget {
+  const DiffLayout({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    if (MediaQuery.of(context).size.width > 600) {
+      return Row(
+        children: [
+          Container(
+            width: 50,
+            height: 50,
+            color: Colors.red,
+          ),
+          const SizedBox(width: 10),
+          Container(
+            width: 50,
+            height: 50,
+            color: Colors.blue,
+          ),
+          const SizedBox(width: 10),
+          Container(
+            width: 50,
+            height: 50,
+            color: Colors.green,
+          ),
+        ],
+      );
+    }
+
+    return Column(children: [
+      Container(
+        width: 50,
+        height: 50,
+        color: Colors.red,
+      ),
+      const SizedBox(width: 10),
+      Container(
+        width: 50,
+        height: 50,
+        color: Colors.blue,
+      ),
+      const SizedBox(width: 10),
+      Container(
+        width: 50,
+        height: 50,
+        color: Colors.green,
+      ),
+    ]);
   }
 }
