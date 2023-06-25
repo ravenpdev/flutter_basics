@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/presentation/custom_button/custom_button.dart';
+import 'package:flutter_basics/presentation/custom_button/gesture_button.dart';
 
 class ButtonExample extends StatelessWidget {
   const ButtonExample({super.key});
+
+  void onTap() {
+    print('onTap!');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +46,14 @@ class ButtonExample extends StatelessWidget {
               print(value);
             },
           ),
+          const SizedBox(height: 20),
+          CustomButton(
+            onTap: onTap,
+            icon: Icons.home,
+            iconColor: Colors.white,
+          ),
+          const SizedBox(height: 20),
+          const GestureButton(),
         ],
       ),
     );
