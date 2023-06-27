@@ -41,6 +41,26 @@ class UsersPage extends StatelessWidget {
               users[index].profession,
               style: const TextStyle(color: Colors.grey),
             ),
+            trailing: IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.more_vert),
+            ),
+            // trailing: Row(
+            //   children: [
+            //     IconButton(
+            //         onPressed: () {},
+            //         icon: const Icon(
+            //           Icons.star,
+            //           size: 6,
+            //         )),
+            //     IconButton(
+            //         onPressed: () {},
+            //         icon: const Icon(
+            //           Icons.remove,
+            //           size: 6,
+            //         )),
+            //   ],
+            // ),
           );
         },
       ),
