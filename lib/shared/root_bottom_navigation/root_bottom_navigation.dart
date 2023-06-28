@@ -16,7 +16,6 @@ class _RootBottomNavigationState extends State<RootBottomNavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Navigation')),
       body: IndexedStack(
         index: _currentIndex,
         children: const [
