@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/screen_one/screen_one.dart';
+import 'package:flutter_basics/screen_two/screen_two.dart';
 import 'package:flutter_basics/shared/root_bottom_navigation/root_bottom_navigation.dart';
 
 void main() {
@@ -19,6 +21,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const RootBottomNavigation(),
+      routes: <String, WidgetBuilder>{
+        "/root": (BuildContext context) => const RootBottomNavigation(),
+        "/screenOne": (BuildContext context) => const ScreenOne(),
+        "/screenTwo": (BuildContext context) => const ScreenTwo(),
+      },
     );
   }
 }

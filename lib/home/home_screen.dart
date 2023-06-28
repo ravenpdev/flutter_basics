@@ -12,28 +12,34 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Home'),
         centerTitle: true,
       ),
-      body: Column(children: [
-        TextButton(
+      body: Column(
+        children: [
+          TextButton(
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const ScreenOne(),
-                ),
-              );
+              Navigator.pushNamed(context, "/screenOne");
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) => const ScreenOne(),
+              //   ),
+              // );
             },
-            child: const Text('Screen One')),
-        TextButton(
+            child: const Text('Screen One'),
+          ),
+          TextButton(
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const ScreenTwo(),
-                ),
-              );
+              Navigator.pushNamed(context, "/screenTwo");
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) => const ScreenTwo(),
+              //   ),
+              // );
             },
-            child: const Text('Screen Two')),
-      ]),
+            child: const Text('Screen Two'),
+          ),
+        ],
+      ),
     );
   }
 }
