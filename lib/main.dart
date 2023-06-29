@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/core/theme/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,10 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
-        useMaterial3: true,
-      ),
+      themeMode: ThemeMode.light,
+      theme: ThemeClass.lightTheme,
+      darkTheme: AppTheme.darkTheme,
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Flutter Basics'),
@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
           child: const Icon(Icons.add),
         ),
         drawer: Drawer(
+          backgroundColor: ThemeClass.secondaryColor,
           child: ListView(
             padding: EdgeInsets.zero,
             children: [
